@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple List App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 8px;
+      width: 200px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-left: 5px;
+    }
+    ul {
+      margin-top: 20px;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My List</h2>
+  <input type="text" id="itemInput" placeholder="Enter item">
+  <button onclick="addItem()">Add</button>
+
+  <ul id="listContainer"></ul>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById('itemInput');
+      const value = input.value.trim();
+      if (value) {
+        const li = document.createElement('li');
+        li.textContent = value;
+        document.getElementById('listContainer').appendChild(li);
+        input.value = '';
+      }
+    }
+  </script>
+
+</body>
+</html>
