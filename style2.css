@@ -1,0 +1,11 @@
+.task {
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: gray;
+  background-color: #f0f0f0;
+}
